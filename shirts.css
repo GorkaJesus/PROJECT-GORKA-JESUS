@@ -1,0 +1,305 @@
+.color1 {
+  color: #62263f;
+}
+
+.color2 {
+  color: #813345;
+}
+
+.color3 {
+  color: #b14c50;
+}
+
+.color4 {
+  color: #f0755d;
+}
+
+.color5 {
+  color: #ffb169;
+}
+
+/* Media Queries for responsive design */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #ffb169;
+    /* Color más suave para el fondo */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header {
+    background-color: #62263f;
+    /* Color oscuro para el encabezado */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    background-color: #f0755d;
+    /* Color cálido para el pie de página */
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #ffb169;
+    /* Color suave para fondo */
+  }
+
+  header {
+    background-color: #813345;
+    /* Color intermedio para el encabezado */
+  }
+
+  footer {
+    background-color: #f0755d;
+    /* Color cálido para el pie de página */
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: #ffb169;
+    /* Color suave para fondo */
+  }
+
+  header {
+    background-color: #62263f;
+    /* Color más oscuro para el encabezado */
+  }
+
+  footer {
+    background-color: #813345;
+    /* Color intermedio para el pie de página */
+  }
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 150px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-list li a {
+  color: #ffffff;
+  /* Color blanco para el texto */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Images with media queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #f0755d;
+    /* Color cálido para el fondo */
+  }
+
+  .item {
+    background-color: #813345;
+    /* Color intermedio para los elementos */
+    padding: 15px;
+    border: 2px solid #62263f;
+    /* Borde oscuro */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #f0755d;
+    /* Color cálido para el fondo */
+  }
+
+  .item {
+    background-color: #813345;
+    /* Color intermedio para los elementos */
+    padding: 15px;
+    border: 2px solid #62263f;
+    /* Borde oscuro */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #62263f;
+    /* Color oscuro para el fondo */
+  }
+
+  .item {
+    background-color: #b14c50;
+    /* Color intermedio para los elementos */
+    padding: 15px;
+    border: 2px solid #813345;
+    /* Borde más claro */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* General Styles */
+.background {
+  background-color: #b14c50;
+  /* Fondo intermedio */
+}
+
+.icons {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+
+.icons a {
+  font-size: 30px;
+}
+
+.facebook {
+  color: #f0755d;
+  ;
+  /* Facebook con un color oscuro */
+}
+
+.whatsapp {
+  color: #ffb169;
+  /* WhatsApp con color suave */
+}
+
+.instagram {
+  color: #f0755d;
+  /* Instagram con color cálido */
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+}
+
+.flex-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #b14c50;
+  /* Fondo intermedio */
+}
+
+.element {
+  background-color: #ffb169;
+  /* Fondo suave para los elementos */
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+  margin: 10px;
+}
+
+p {
+  width: auto;
+  border: 3px solid #b14c50;
+  /* Borde intermedio */
+  margin: 5px;
+  padding: 10px;
+  background-color: #813345;
+  /* Fondo intermedio */
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+p:hover {
+  border-width: 5px;
+  border-color: #f0755d;
+  /* Color cálido en hover */
+  transition: border-width 0.3s ease, border-color 0.3s ease;
+}
+
+.text {
+  width: auto;
+  border: 3px solid #b14c50;
+  /* Borde intermedio */
+  margin: 5px;
+  padding: 10px;
+  background-color: #b14c50;
+  /* Fondo intermedio */
+  border-radius: 8px;
+  text-align: start;
+}

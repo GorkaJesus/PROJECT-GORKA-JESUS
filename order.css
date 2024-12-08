@@ -1,0 +1,166 @@
+.color1 {
+  color: #62263f;
+}
+
+.color2 {
+  color: #813345;
+}
+
+.color3 {
+  color: #b14c50;
+}
+
+.color4 {
+  color: #f0755d;
+}
+
+.color5 {
+  color: #ffb169;
+}
+
+/* */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  /* Light brown background */
+  color: #62263f;
+  /* Dark brown text */
+  box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Form styles */
+form {
+  background-color: #ffb169;
+  /* Light brown form background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #62263f;
+  /* Dark brown labels */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b14c50;
+  /* Intermediate brown border */
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #f0755d;
+  /* Bright brown submit button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #813345;
+  /* Darker brown on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Product table */
+#products-table {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+  background-color: #f0755d;
+  /* Bright brown table header */
+  color: white;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button to show the table */
+#show-table {
+  display: block;
+  width: 100%;
+  background-color: #f0755d;
+  /* Bright brown button background */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#show-table:hover {
+  background-color: #813345;
+  /* Darker brown on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Button to go to the homepage */
+.btn-secondary {
+  background-color: #6c757d;
+  /* Soft gray start button */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  /* Dark gray on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+
+  form,
+  #products-table {
+    margin-bottom: 20px;
+  }
+
+  input[type="submit"],
+  #show-table,
+  .btn-secondary {
+    width: 100%;
+    padding: 12px;
+  }
+}

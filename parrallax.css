@@ -1,0 +1,247 @@
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+  .header-parallax {
+      height: 50vh;
+  }
+
+  .content {
+      padding-top: 30vh;
+      font-size: 1.8em;
+  }
+
+  .content h1 {
+      font-size: 2.5em;
+  }
+
+  .content p {
+      font-size: 1.2em;
+  }
+
+  .football-section {
+      height: 40vh;
+      font-size: 1.5em;
+  }
+
+  .section-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .player-image {
+      width: 150px;
+  }
+
+  .box {
+      width: 90%;
+  }
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 768px) {
+  .header-parallax {
+      height: 70vh;
+  }
+
+  .content {
+      padding-top: 35vh;
+      font-size: 2.2em;
+  }
+
+  .content h1 {
+      font-size: 3em;
+  }
+
+  .content p {
+      font-size: 1.4em;
+  }
+
+  .football-section {
+      height: 45vh;
+      font-size: 1.8em;
+  }
+
+  .section-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .player-image {
+      width: 160px;
+  }
+
+  .box {
+      width: 80%;
+  }
+}
+
+/* Desktop responsiveness */
+@media screen and (min-width: 1024px) {
+  .header-parallax {
+      height: 100vh;
+  }
+
+  .content {
+      padding-top: 40vh;
+      font-size: 2.5em;
+  }
+
+  .content h1 {
+      font-size: 4em;
+  }
+
+  .content p {
+      font-size: 1.5em;
+  }
+
+  .football-section {
+      height: 50vh;
+      font-size: 2em;
+  }
+
+  .section-content {
+      flex-direction: row;
+  }
+
+  .player-image {
+      width: 180px;
+  }
+
+  .box {
+      width: 400px;
+  }
+}
+
+/* Basic body styling */
+body {
+  margin: 0;
+  height: 400vh;
+  /* Increase body height to allow scrolling */
+  background-color: #f8f8f8;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  /* Hide horizontal scroll */
+}
+
+/* Header with parallax effect */
+.header-parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* Header takes up full viewport height */
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Parallax background styling */
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/cr7-shirt.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+/* Main image in the parallax header */
+.header-parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-out;
+}
+
+/* Content section below the parallax header */
+.content {
+  padding-top: 40vh;
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+  background-color: #6DBE45;
+  min-height: 60vh;
+}
+
+.content h1 {
+  font-size: 4em;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #f8f8f8;
+}
+
+/* Football themed sections */
+.football-section {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+#section1 { background-color: #6DBE45; }
+#section2 { background-color: #F4E300; }
+#section3 { background-color: #F44336; }
+#section4 { background-color: #003DA5; }
+#section5 { background-color: #FFD700; }
+
+.section-content {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.player-image {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: red;
+  width: 100%;
+  transform-origin: left;
+  animation: scroll-watcher 1s linear;
+}
+
+@keyframes scroll-watcher {
+  to {
+      transform: scaleX(1);
+  }
+}
+
+.box {
+  height: 60vh;
+  padding: 30px 0;
+  text-align: center;
+  background: #4e4e4e;
+  width: 400px;
+  margin: 30px auto;
+  border-radius: 12px;
+  font-size: 1.4em;
+  color: white;
+}

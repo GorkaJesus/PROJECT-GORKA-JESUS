@@ -1,0 +1,294 @@
+/* Color classes */
+.color1 {
+  color: #62263f;
+}
+
+.color2 {
+  color: #813345;
+}
+
+.color3 {
+  color: #b14c50;
+}
+
+.color4 {
+  color: #f0755d;
+}
+
+.color5 {
+  color: #ffb169;
+}
+
+
+/* Media Queries for responsive design */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #ffb169;
+    /* Color más suave para el fondo */
+  }
+
+  header {
+    background-color: #62263f;
+    /* Color oscuro para el encabezado */
+  }
+
+  footer {
+    background-color: #f0755d;
+    /* Color cálido para el pie de página */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icons {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+
+  .box img {
+    width: 100%;
+    /* Imagen toma todo el ancho en pantallas pequeñas */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: #ffb169;
+    /* Color suave para fondo */
+  }
+
+  header {
+    background-color: #813345;
+    /* Color intermedio para el encabezado */
+  }
+
+  footer {
+    background-color: #f0755d;
+    /* Color cálido para el pie de página */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icons {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+
+  .box img {
+    width: 100%;
+    /* Imagen toma todo el ancho en pantallas medianas */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #ffb169;
+    /* Color suave para fondo */
+  }
+
+  header {
+    background-color: #813345;
+    /* Color intermedio para el encabezado */
+  }
+
+  footer {
+    background-color: #f0755d;
+    /* Color cálido para el pie de página */
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .icons {
+    gap: 15px;
+    justify-content: flex-start;
+  }
+
+  .box {
+    width: 70%;
+  }
+
+  .box img {
+    width: 80%;
+    /* Imagen ajustada */
+  }
+}
+
+/* General */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f4f8;
+  color: #1d2a3a;
+  line-height: 1.6;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* To prevent horizontal scroll */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+  background-color: #62263f;
+  /* color1 */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: #f0755d;
+  /* color4 */
+  border-bottom: 3px solid #f0755d;
+  /* color4 */
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons a {
+  font-size: 28px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.icons a:hover {
+  color: #f0755d;
+  /* color4 */
+}
+
+/* Scroll watcher */
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0755d;
+  /* color4 */
+  z-index: 1000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+/* Background */
+#background {
+  position: relative;
+  background: linear-gradient(135deg, #b14c50, #f0755d);
+  /* color3 to color4 */
+  min-height: 100vh;
+  padding-top: 80px;
+  /* To avoid overlap with sticky header */
+}
+
+.box {
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(98, 38, 63, 0.8);
+  /* color1 with opacity */
+  width: 70%;
+  margin: 40px auto;
+  border-radius: 12px;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.box img {
+  width: 80%;
+  /* Adjusted image */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.box img:hover {
+  transform: scale(1.05);
+  /* Image zoom on hover */
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  /* Subtle lift effect on boxes */
+}
+
+/* New style for the reveal effect */
+.reveal {
+  opacity: 0;
+  /* Elements start as invisible */
+  transform: translateY(20px);
+  /* Move downward */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* Smooth transition for visibility and movement */
+}
+
+.reveal.active {
+  opacity: 1;
+  /* Becomes visible when 'active' class is added */
+  transform: translateY(0);
+  /* Moves to its original position */
+}
+

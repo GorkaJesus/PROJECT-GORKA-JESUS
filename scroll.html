@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos mas gustados</title>
+    <link rel="stylesheet" href="css/scroll.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <!-- Menu -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="shirts.html">Camisetas</a></li>
+                    <li><a href="shoes.html">Botas</a></li>
+                    <li><a href="form.html">Formulario</a></li>
+                    <li><a href="order.html">Precios</a></li>
+                    <li><a href="thanks.html">Gracias</a></li> <!-- Link to thanks -->
+
+                </ul>
+            </nav>
+            <!-- Icons -->
+            <div class="icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="background">
+            <!-- Scroll watcher (visual effect) -->
+            <div class="scroll-watcher"></div>
+
+            <!-- Content Boxes  -->
+            <div class="box reveal">
+                <p>Camiseta de CR7</p>
+                <img src="img/cr7-shirt.jpg" alt="Camisetas">
+            </div>
+            <div class="box reveal">
+                <p>Botas de Messi</p>
+                <img src="img/messi-boots.jpg" alt="Botas">
+            </div>
+            <div class="box reveal">
+                <p>Camiseta de Maradona</p>
+                <img src="img/maradona-shirt.jpg" alt="Camisetas">
+            </div>
+            <div class="box reveal">
+                <p>Botas de Vinicius</p>
+                <img src="img/vinicius-boots.jpg" alt="Botas">
+            </div>
+            <div class="box reveal">
+                <p>Camiseta de Zidane</p>
+                <img src="img/zidane-shirt.jpg" alt="Camisetas">
+            </div>
+        </div>
+    </main>
+
+    <!-- Here we also include javascript-->
+    <script>
+        // Reveal function
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                // Si el elemento está visible en la ventana (con un margen de 150px)
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active"); // Añadir la clase 'active' al elemento
+                } else {
+                    reveals[i].classList.remove("active"); // Remover la clase 'active' si el elemento no es visible
+                }
+            }
+        }
+
+        // Execute the fuction
+        window.addEventListener("scroll", reveal, { passive: true });
+    </script>
+
+</body>
+
+</html>

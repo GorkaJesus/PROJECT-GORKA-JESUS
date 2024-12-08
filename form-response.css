@@ -1,0 +1,140 @@
+/* Colors */
+:root {
+    --primary-brown: #62263f;
+    --secondary-brown: #813345;
+    --background-brown: #f0f4f8;
+    --button-brown: #f0755d;
+    --button-hover-brown: #b14c50;
+    --text-light: #ffffff;
+    --error-color: #ff3333;
+}
+
+body {
+    background-color: var(--background-brown);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-brown);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    padding: 1em;
+}
+
+form-signup {
+    margin-top: 2em;
+}
+
+/* Labels styles*/
+label {
+    font-weight: bold;
+    color: var(--primary-brown);
+}
+
+/* Inputs styles */
+input[type="text"],
+input[type="password"] {
+    border: 2px solid var(--primary-brown);
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--secondary-brown);
+    box-shadow: 0 0 5px var(--secondary-brown);
+}
+
+/* Button styles */
+button {
+    background-color: var(--button-brown);
+    color: var(--text-light);
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-brown);
+}
+
+/* Style for errors */
+#error-username-required,
+#error-password-required,
+#error-password-confirm-required,
+#error-password-match-required {
+    color: var(--error-color);
+    font-size: 0.9em;
+    display: none;
+}
+
+/* Style for validation form */
+#my-jumbotron {
+    padding: 2em;
+    background-color: var(--primary-brown);
+    color: var(--text-light);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2em 0;
+    /* Añadir margen arriba y abajo */
+}
+
+#my-jumbotron h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h1.textcenter {
+    margin: 0;
+    color: var(--text-light);
+}
+
+/* Center for html */
+html,
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-inicio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--button-brown);
+    color: var(--text-light);
+    padding: 0.8em 1.2em;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inicio:hover {
+    background-color: var(--button-hover-brown);
+}
